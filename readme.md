@@ -17,4 +17,26 @@ It lets you **enqueue commands**, **process them with multiple workers**, **retr
 ---
 
 ## 📁 Project Structure
+queuectl/
+├── src/
+│ ├── models/
+│ │ └── Job.js
+│ ├── services/
+│ │ └── JobService.js
+│ ├── controllers/
+│ │ └── JobController.js
+│ ├── cli.js
+│ └── database.js
+├── .env
+├── package.json
+└── README.md
 
+
+## 🔍 How It Works
+
+1. **Enqueue** – A job (command) is added to MongoDB with the state `pending`.
+2. **Worker** – Periodically polls for pending jobs.
+3. **Processing** – Executes the job’s command using `child_process.exec`.
+4. **Retry** – On failure, retries the job with **exponential backoff** (based on retry count).
+5. **DLQ (Dead Letter Queue)** – After maximum retries, the job is moved to the Dead Letter Queue for inspection.
+6. **Persistence** – All jobs and their states are **persisted in MongoDB**, even after system restarts.
