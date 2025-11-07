@@ -1,0 +1,7 @@
+export const STATES = {
+  PENDING: "pending",
+  PROCESSING: "processing",
+  COMPLETED: "completed",
+  FAILED: "failed",
+  DEAD: "dead",
+};
