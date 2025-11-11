@@ -18,7 +18,7 @@ All data is stored in local JSON files — no external database is used.
    ```bash
    git clone https://github.com/roshanperwez/QueueCTL.git
    cd QueueCTL
-````
+
 
 2. Install the dependencies
 
@@ -237,11 +237,5 @@ Everything is persisted under the `/data` folder.
 **Author:** Roshan Perwez
 **License:** MIT
 
-```
-
----
-
-✅ You can copy this entire block directly into your `README.md` —  
-it’s fully Markdown-formatted and will render beautifully on GitHub.
 ```
 
