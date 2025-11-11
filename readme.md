@@ -236,6 +236,3 @@ Everything is persisted under the `/data` folder.
 
 **Author:** Roshan Perwez
 **License:** MIT
-
-```
-
